@@ -1,6 +1,10 @@
 Follow the steps to Run the project:-
 
-install all the above libraries, after that go for following commands:-
+install all the above libraries:-
+```
+pip install -r requirements.txt
+```
+after that go for following commands:-
 
 ```
 1.conda create -p venv python==3.11.7 -y
