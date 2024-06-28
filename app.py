@@ -3,9 +3,7 @@ import google.generativeai as genai
 import os
 import PyPDF2 as pdf
 from dotenv import load_dotenv
-
-
-load_dotenv() ## load all our environment variables
+load_dotenv() 
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
 
@@ -23,22 +21,16 @@ def input_pdf_text(uploaded_file):
         text+=str(page.extract_text())
     return text
 
-
-## Streamlit App
-
-st.set_page_config(page_title="RESUME ANALYZER")
-st.header("RESUME ANALYZER(ATS)")
-input_text=st.text_area("Job Description: ",key="input")
+st.set_page_config(page_title="Automated Resume Evualation using Generative AI")
+st.header("Automated Resume Evualation using Generative AI")
+input_text=st.text_area("Please give Job Description: ",key="input")
 uploaded_file=st.file_uploader("Upload your resume(PDF)...",type=["pdf"])
 
 
 if uploaded_file is not None:
     st.write("PDF Uploaded Successfully")
 
-
 submit1 = st.button("How can i improve?")
-
-#submit2 = st.button("How Can I Improvise my Skills")
 
 submit3 = st.button("Percentage match")
 
