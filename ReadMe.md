@@ -7,5 +7,11 @@ install all the above libraries, after that go for following commands:-
 ```
 
 
-2. conda activate path
-3. streamlit run path\app.py
+```
+conda activate path
+```
+
+
+```
+ streamlit run path\app.py
+```
